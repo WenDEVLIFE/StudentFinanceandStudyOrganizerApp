@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/md_theme_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Welcome Greeting -->
+        <TextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_greeting"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+            android:textColor="@color/md_theme_onBackground"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Total Finance Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_finance_summary"
+            style="@style/Widget.App.Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/md_theme_primary"
+            app:layout_constraintTop_toBottomOf="@id/tv_greeting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_total_balance_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_balance_label"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                    android:textColor="#C5D6FF"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_total_balance_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="$1,245.50"
+                    android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_balance_title"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Income / Expense Pills in Card -->
+                <LinearLayout
+                    android:id="@+id/layout_balance_pills"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_balance_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="▲ Income"
+                            android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                            android:textColor="#C5D6FF" />
+
+                        <TextView
+                            android:id="@+id/tv_dashboard_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+$1,850.00"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="▼ Expense"
+                            android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                            android:textColor="#C5D6FF" />
+
+                        <TextView
+                            android:id="@+id/tv_dashboard_expense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-$604.50"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:textColor="#FFD8D8"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Quick Actions Header -->
+        <TextView
+            android:id="@+id/tv_quick_actions_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/dashboard_quick_actions"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textColor="@color/md_theme_onBackground"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/card_finance_summary"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Quick Actions Row -->
+        <LinearLayout
+            android:id="@+id/layout_quick_actions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_quick_actions_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_quick_expense"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="@string/dashboard_action_expense"
+                app:icon="@drawable/ic_add"
+                app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_quick_task"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:text="@string/dashboard_action_task"
+                app:icon="@drawable/ic_add"
+                app:iconGravity="textStart" />
+        </LinearLayout>
+
+        <!-- Academic Priority Header -->
+        <TextView
+            android:id="@+id/tv_study_overview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/dashboard_study_overview"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textColor="@color/md_theme_onBackground"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/layout_quick_actions"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Next Class / Study Banner Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_next_class"
+            style="@style/Widget.App.Card.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_study_overview_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_class_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded_pill"
+                    android:backgroundTint="@color/md_theme_primaryContainer"
+                    android:paddingStart="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="2dp"
+                    android:text="Next Class • 10:00 AM"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                    android:textColor="@color/md_theme_primary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_course_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Computer Science 101 - Algorithms"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                    android:textColor="@color/md_theme_onSurface"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/tv_class_badge"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_course_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Room 304 • Prof. Alan Turing"
+                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:textColor="@color/md_theme_onSurfaceVariant"
+                    app:layout_constraintTop_toBottomOf="@id/tv_course_name"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Focus Timer Prompt Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_focus_prompt"
+            style="@style/Widget.App.Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/md_theme_tertiaryContainer"
+            app:layout_constraintTop_toBottomOf="@id/card_next_class"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_focus_prompt_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ready for a study sprint?"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    android:textColor="@color/md_theme_onTertiaryContainer"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_dashboard_start_focus" />
+
+                <TextView
+                    android:id="@+id/tv_focus_prompt_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Boost your productivity with a 25-min Pomodoro session."
+                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:textColor="@color/md_theme_onTertiaryContainer"
+                    app:layout_constraintTop_toBottomOf="@id/tv_focus_prompt_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_dashboard_start_focus" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_dashboard_start_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboard_action_focus"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
