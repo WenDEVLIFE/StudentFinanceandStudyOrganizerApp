@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "moai-lang-java",
+  "owner": "dolsoon",
+  "repo": "my-awesome-project",
+  "path": ".claude/skills/moai-lang-java",
+  "branch": "feature/SPEC-AI-FACIL-001",
+  "sha": "b308f738a7e0e47f37535a846a779e46dbc4aa0a",
+  "source": "manual"
+}
