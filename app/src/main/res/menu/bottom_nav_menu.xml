@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/nav_dashboard" />
+
+    <item
+        android:id="@+id/nav_finance"
+        android:icon="@drawable/ic_wallet"
+        android:title="@string/nav_finance" />
+
+    <item
+        android:id="@+id/nav_study"
+        android:icon="@drawable/ic_school"
+        android:title="@string/nav_study" />
+
+    <item
+        android:id="@+id/nav_timer"
+        android:icon="@drawable/ic_timer"
+        android:title="@string/nav_timer" />
+</menu>
