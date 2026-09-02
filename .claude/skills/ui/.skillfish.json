@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "ui",
+  "owner": "pluginagentmarketplace",
+  "repo": "custom-plugin-android",
+  "path": "skills/ui",
+  "branch": "main",
+  "sha": "21c8ecd54be063d310a636c99384e8f7468a7efb",
+  "source": "manual"
+}
