@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Study Category Tabs (Classes vs Tasks) -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_study"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/md_theme_surface"
+            app:tabIndicatorColor="@color/md_theme_primary"
+            app:tabSelectedTextColor="@color/md_theme_primary"
+            app:tabTextColor="@color/md_theme_onSurfaceVariant"
+            app:tabMode="fixed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/study_tab_tasks" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/study_tab_classes" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <!-- Tasks and Assignments Recycler -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_study_tasks"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="16dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout_study"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/item_task"
+            tools:itemCount="3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- FAB for adding Task -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="@string/study_add_task"
+        app:icon="@drawable/ic_add"
+        app:backgroundTint="@color/md_theme_primary"
+        app:iconTint="@color/md_theme_onPrimary"
+        android:textColor="@color/md_theme_onPrimary" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
