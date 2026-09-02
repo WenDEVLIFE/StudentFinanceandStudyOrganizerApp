@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Primary Brand Colors -->
+    <color name="md_theme_primary">#1E65FF</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#DDE6FF</color>
+    <color name="md_theme_onPrimaryContainer">#001B44</color>
+
+    <!-- Secondary Accent Colors -->
+    <color name="md_theme_secondary">#4D5E85</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#D8E2FF</color>
+    <color name="md_theme_onSecondaryContainer">#061B3D</color>
+
+    <!-- Tertiary Colors (Study / Timer Accent) -->
+    <color name="md_theme_tertiary">#6E5196</color>
+    <color name="md_theme_onTertiary">#FFFFFF</color>
+    <color name="md_theme_tertiaryContainer">#EEDBFF</color>
+    <color name="md_theme_onTertiaryContainer">#290B50</color>
+
+    <!-- Background and Surface Colors -->
+    <color name="md_theme_background">#F8F9FC</color>
+    <color name="md_theme_onBackground">#191C20</color>
+    <color name="md_theme_surface">#FFFFFF</color>
+    <color name="md_theme_onSurface">#191C20</color>
+    <color name="md_theme_surfaceVariant">#E1E2EC</color>
+    <color name="md_theme_onSurfaceVariant">#44474F</color>
+    <color name="md_theme_outline">#757780</color>
+    <color name="md_theme_outlineVariant">#C5C6D0</color>
+
+    <!-- Semantic Financial Colors -->
+    <color name="color_income">#16A34A</color>
+    <color name="color_income_container">#DCFCE7</color>
+    <color name="color_on_income_container">#14532D</color>
+
+    <color name="color_expense">#DC2626</color>
+    <color name="color_expense_container">#FEE2E2</color>
+    <color name="color_on_expense_container">#7F1D1D</color>
+
+    <!-- Semantic Priority Colors (Study) -->
+    <color name="priority_high">#E11D48</color>
+    <color name="priority_high_container">#FFE4E6</color>
+    <color name="priority_medium">#F59E0B</color>
+    <color name="priority_medium_container">#FEF3C7</color>
+    <color name="priority_low">#059669</color>
+    <color name="priority_low_container">#D1FAE5</color>
+
+    <!-- General Utility -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>

@@ -1,3 +1,56 @@
 <resources>
-    <string name="app_name">Student Finance and Study Organizer App</string>
+    <string name="app_name">Student Hub</string>
+    
+    <!-- Navigation Items -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_finance">Finance</string>
+    <string name="nav_study">Study</string>
+    <string name="nav_timer">Focus</string>
+    
+    <!-- Dashboard Screen -->
+    <string name="dashboard_greeting">Welcome Back, Student!</string>
+    <string name="dashboard_quick_actions">Quick Actions</string>
+    <string name="dashboard_action_expense">Add Expense</string>
+    <string name="dashboard_action_task">Add Task</string>
+    <string name="dashboard_action_focus">Start Focus</string>
+    <string name="dashboard_finance_overview">Financial Health</string>
+    <string name="dashboard_study_overview">Academic Priority</string>
+    <string name="total_balance_label">Total Balance</string>
+    <string name="monthly_income_label">Income</string>
+    <string name="monthly_expense_label">Expense</string>
+    
+    <!-- Finance Screen -->
+    <string name="finance_title">Finance Management</string>
+    <string name="finance_add_transaction">Record Transaction</string>
+    <string name="finance_recent_transactions">Recent Transactions</string>
+    <string name="finance_budget_status">Monthly Budget</string>
+    <string name="account_all">All Accounts</string>
+    <string name="account_cash">Cash</string>
+    <string name="account_bank">Bank</string>
+    <string name="account_ewallet">E-Wallet</string>
+    <string name="type_expense">Expense</string>
+    <string name="type_income">Income</string>
+    <string name="amount_hint">0.00</string>
+    <string name="notes_hint">Add a note or description...</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+
+    <!-- Study Screen -->
+    <string name="study_title">Study &amp; Tasks</string>
+    <string name="study_tab_classes">Today\'s Classes</string>
+    <string name="study_tab_tasks">Assignments</string>
+    <string name="study_add_task">Add Task</string>
+    <string name="priority_high_label">High</string>
+    <string name="priority_medium_label">Medium</string>
+    <string name="priority_low_label">Low</string>
+
+    <!-- Focus / Pomodoro Screen -->
+    <string name="timer_title">Focus Pomodoro</string>
+    <string name="timer_default_display">25:00</string>
+    <string name="timer_state_work">Focus Session</string>
+    <string name="timer_state_break">Short Break</string>
+    <string name="timer_btn_start">Start Focus</string>
+    <string name="timer_btn_pause">Pause</string>
+    <string name="timer_btn_reset">Reset</string>
+    <string name="timer_selected_task">Linked Task: None</string>
 </resources>
